@@ -28,3 +28,25 @@ module "dns" {
   records = {
   }
 }
+
+module "kubernetes" {
+  source = "./modules/kubernetes"
+
+  # common variables
+  env    = var.env
+  region = var.region
+
+  # kubernetes variables
+  cluster = {
+    name    = "k8s-01"
+    vpc_id  = module.vpc.vpc.id
+    version = "1.22.7-do.0"
+    default_node_pool = {
+      name  = "default"
+      size  = "s-2vcpu-4gb"
+      count = 1
+    }
+  }
+}
+
+
