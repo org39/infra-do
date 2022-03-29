@@ -4,7 +4,7 @@
 variable "env" {
   type        = string
   description = "The environment to deploy to infrastructure"
-  default     = "prd"
+  default     = "production"
 }
 
 variable "region" {
