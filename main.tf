@@ -23,4 +23,12 @@ module "dns" {
   domain = {
     name = "org39.com"
   }
+
+  # record variables
+  records = {
+    loop = {
+      type  = "A"
+      value = "127.0.0.1"
+    }
+  }
 }

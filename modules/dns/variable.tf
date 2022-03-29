@@ -28,21 +28,19 @@ EOT
 ############################################################
 # dns recond variables
 ############################################################
-variable "record" {
-  type = list(
+variable "records" {
+  type = map(
     object({
       type  = string
-      name  = string
       value = string
     })
   )
 
   description = <<EOT
-The list of dns record to manageed by this module.
+The list of dns record to manageed by this module. key is the record name.
   - type: The dns record type
-  - name: The dns record name
   - value: The dns record value
 EOT
 
-  default = []
+  default = {}
 }
