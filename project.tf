@@ -5,7 +5,6 @@ resource "digitalocean_project" "org39" {
 
 resource "digitalocean_project_resources" "org39" {
   project = digitalocean_project.org39.id
-  resources = [
-    module.vpc.vpc.urn
-  ]
+  # place-holder for furture resources
+  resources = []
 }
