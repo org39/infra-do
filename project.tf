@@ -5,6 +5,7 @@ resource "digitalocean_project" "org39" {
 
 resource "digitalocean_project_resources" "org39" {
   project = digitalocean_project.org39.id
-  # place-holder for furture resources
-  resources = []
+  resources = [
+    module.dns.domain.urn
+  ]
 }
