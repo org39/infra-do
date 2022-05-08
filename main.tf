@@ -26,6 +26,14 @@ module "dns" {
 
   # record variables
   records = {
+    "argocd.devops" = {
+      type  = "A"
+      value = "167.172.7.43"
+    }
+    "status.devops" = {
+      type  = "CNAME"
+      value = "statuspage.betteruptime.com"
+    }
   }
 }
 
