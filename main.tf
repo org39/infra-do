@@ -40,7 +40,8 @@ module "kubernetes" {
   cluster = {
     name    = "k8s-01"
     vpc_id  = module.vpc.vpc.id
-    version = "1.22.7-do.0"
+    version = "1.22.8-do.1"
+    tags    = ["k8s", "k8s:e921d20e-a13a-443f-871f-4b53ec1cd4fb", "k8s:k8s-01"]
     default_node_pool = {
       name  = "default"
       size  = "s-2vcpu-4gb"
