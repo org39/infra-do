@@ -32,7 +32,7 @@ module "dns" {
     }
     "status.devops" = {
       type  = "CNAME"
-      value = "statuspage.betteruptime.com"
+      value = "statuspage.betteruptime.com."
     }
   }
 }
